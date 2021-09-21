@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.FXMLnominaController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="427.0" prefWidth="493.0" style="-fx-background-color: #DCBF6C;">
+         <children>
+            <Label text="CONSULTAS">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bell MT" size="31.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="404.0" prefWidth="448.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="321.0" prefWidth="207.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ComboBox fx:id="ComboboxVentas" onAction="#ComboBoxVentas" prefHeight="25.0" prefWidth="140.0" promptText="VENTAS">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label fx:id="labelVentas" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="textMes" editable="false" onKeyTyped="#eventKeyNum">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="buttonVentas" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ButtonVentas" text="ACEPTAR">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="respuestaventa">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="133.0" text="Cantidad a buscar">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Bell MT" size="17.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textCantidadBus" onKeyTyped="#eventKeyNum">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="buttonCantidadBus" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ButtonCantidadBuscar" text="ACEPTAR">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="respuestabuscar">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="349.0" prefWidth="253.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="223.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ComboBox fx:id="comboboxMod" onAction="#ComboboxMod" prefWidth="150.0" promptText="Modificaciones">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label fx:id="labelmod1" prefHeight="21.0" prefWidth="190.0" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="textmod1" editable="false" onKeyTyped="#eventKeyNum">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="labelmod2" prefHeight="17.0" prefWidth="189.0" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="textmod2" editable="false" onKeyTyped="#eventKeyNum">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button fx:id="buttonModificaciones" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ButtonModificar" text="ACEPTAR">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
