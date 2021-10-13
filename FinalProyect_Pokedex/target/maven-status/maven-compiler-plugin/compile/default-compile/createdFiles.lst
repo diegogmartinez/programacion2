@@ -1,0 +1,5 @@
+ClsOperaciones\OperacionesUsu.class
+ClsModelos\mdPokemon.class
+Conexion\ConexionMYSQL.class
+ClsModelos\mdUsuario.class
+.netbeans_automatic_build
