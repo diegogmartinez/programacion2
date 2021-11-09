@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>DEPARTAMENTO DE ORIGEN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <a th:href="@{/}">Regresar</a>
+        <br/>
+        <form th:action="@{/guardar}" method="post" th:object="${depto}">
+            <br/>
+            <label for="ID_DEPTO">ID del Departamento:</label>
+            <input type="text" name="ID_DEPTO" th:field="*{ID_DEPTO}"
+            <label for="DESCRIPCION_DEPTO">Nombre del Departamento:</label>
+            <input type="text" name="DESCRIPCION_DEPTO" th:field="*{DESCRIPCION_DEPTO}"/>
+            <br/>
+            <input type="submit" name="guardar" value="Guardar"/>
+        </form>
+    </body>
+</html>

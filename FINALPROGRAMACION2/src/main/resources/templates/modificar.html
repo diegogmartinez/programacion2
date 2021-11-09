@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guardar</title>
+    </head>
+    <body>
+        <div class="conteni">
+            <h1>AGREGAR USUARIO</h1>
+            
+            <form th:action="@{/guardar}" method="post" th:object="${usuario}">
+                <div class="botones">
+                <br/>
+                <input type="hidden" name="ID_USUARIO" th:field="*{ID_USUARIO}"/>
+                <label for="NOMBRE">Nombre:</label>
+                <input type="text" name="NOMBRE" th:field="*{NOMBRE}"/>
+                <br/>
+                <label for="APELLIDO">Apellido:</label>
+                <input type="text" name="APELLIDO" th:field="*{APELLIDO}"/>
+                <br/>
+                <label for="ID_DPTO">Departamento:</label>
+                <select name="ID_DEPTO" th:field="*{ID_DEPTO}">
+                    <option th:each="departamento:${departamentos}"
+                            th:value="${departamento.ID_DEPTO}"
+                            th:text="${departamento.DESCRIPCION_DEPTO}"
+                            />
+                </select>
+                <br/>
+                <label for="ID_PROFESION">Profesion:</label>
+                <select name="ID_PROFESION" th:field="*{ID_PROFESION}">
+                    <option th:each="profesion:${profesiones}"
+                            th:value="${profesion.ID_PROFESION}"
+                            th:text="${profesion.DESCRIPCION_PROFESION}"
+                            />
+                </select>
+                <br/>
+                <label for="CORREO_ELECTRONICO">Email:</label>
+                <input type="email" name="CORREO_ELECTRONICO" th:field="*{CORREO_ELECTRONICO}"/>
+                <br/>
+                <label for="TELEFONO">Teléfono:</label>
+                <input type="number" name="TELEFONO" th:field="*{TELEFONO}"/>
+                <br/>
+                <label for="FECHA_NACIMIENTO">Fecha Nacimiento</label>
+                <input type="date" name="FECHA_NACIMIENTO" th:field="*{FECHA_NACIMIENTO}"/>
+                <br/>
+                <label for="LONGITUD">Longitud</label>
+                <input type="double" name="LONGITUD" th:field="*{LONGITUD}"/>
+                <br/>
+                <label for="LATITUD">Latitud</label>
+                <input type="double" name="LATITUD" th:field="*{LATITUD}"/>
+                <br/>
+                <input type="submit" name="guardar" value="Guardar"/>
+            </div>
+            </form>
+              <div class="botones">    
+            <a href="http://www.localhost:8080/"><input type="button" value="REGRESAR"></a>
+        </div>
+                    </div>
+
+ 
+    </body>
+</html>

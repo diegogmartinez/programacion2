@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+/*<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Mi primera pagina</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>CRUD DE USUARIOS</h1>
+        <a th:href="@{/agregar}"><input type="submit" value="AGREGAR PERSONA" name="Agregar Usuario"/></a>
+        <br/>
+        <a th:href="@{/agregar_depto}"><input type="submit" value="AGREGAR DEPARTAMENTO" name="Agregar Departamento"/></a>
+        <br/>
+        <div th:if="${personas != null and !personas.empty}">
+            <table border="1">
+            <tr>
+                <th>ID_DEPTO</th>
+                <th>ID_PRFESION</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Longitud</th>
+                <th>Latitud</th>
+                <th>Fecha de registro</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            
+            <!-- vamos hacer una iteracion de objeto -->
+            <tr th:each="persona : ${personas}">
+                <td th:text="${persona.ID_DEPTO}"></td>
+                <td th:text="${persona.ID_PROFESION}"></td>
+                <td th:text="${persona.nombre}"></td>
+                 <td th:text="${persona.apellido}"></td>
+                 <td th:text="${persona.telefono}"></td>
+                 <td th:text="${persona.email}"></td>
+                 <td th:text="${persona.fecha_nacimiento}"></td>
+                 <td th:text="${persona.longitud}"></td>
+                 <td th:text="${persona.latitud}"></td>
+                 <td th:text="${persona.fecha_registro}"></td>
+                 <td>
+                     <a th:ref="@{/editar/} + ${persona.id_persona}"/> <input type="submit" value="Editar" name="Editar" />
+                 </td>
+                 <td>
+                     <a th:ref="@{/elimiar/} + ${persona.id_persona}"/> <input type="submit" value="Eliminar" name="Eliminar" />
+                 </td>
+            </tr>
+        </table>
+        
+        </div>
+        
+        <div th:if ="${personas ==null or personas.empty}">
+            no hay cuates.
+        </div>    
+    </body>
+</html>
