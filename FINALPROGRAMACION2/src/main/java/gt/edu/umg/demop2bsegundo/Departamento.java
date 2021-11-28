@@ -13,10 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
 
-/**
- *
- * @author mjber
- */
+
 @Data
 @Entity
 @Table(name="tb_departamento")

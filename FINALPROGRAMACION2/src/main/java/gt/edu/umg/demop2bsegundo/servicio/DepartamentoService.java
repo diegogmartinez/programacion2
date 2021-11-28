@@ -9,10 +9,7 @@ import gt.edu.umg.demop2bsegundo.Departamento;
 import gt.edu.umg.demop2bsegundo.Persona;
 import java.util.List;
 
-/**
- *
- * @author Win10
- */
+
 public interface DepartamentoService {
     public List<Departamento> listaDepartamento();
     public void guardar(Departamento depto);

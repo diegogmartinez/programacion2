@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>FACULTAD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <a th:href="@{/}">Regresar</a>
+        <br/>
+        <form th:action="@{/guardar}" method="post" th:object="${facultad}">
+            <br/>
+            <label for="ID_FACULTAD">ID de la FACULTAD:</label>
+            <input type="text" name="ID_FACULTAD" th:field="*{ID_FACULTAD}"
+            <label for="FALCULTAD">Nombre de la FACULTAD:</label>
+            <input type="text" name="FALCULTAD" th:field="*{FALCULTAD}"/>
+            <br/>
+            <input type="submit" name="guardar" value="Guardar"/>
+        </form>
+    </body>
+</html>

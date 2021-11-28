@@ -11,9 +11,9 @@
         <br/>
         <form th:action="@{/guardar}" method="post" th:object="${depto}">
             <br/>
-            <label for="ID_DEPTO">ID del Departamento:</label>
+            <label for="ID_DEPTO">ID del DEPARTAMENTO:</label>
             <input type="text" name="ID_DEPTO" th:field="*{ID_DEPTO}"
-            <label for="DESCRIPCION_DEPTO">Nombre del Departamento:</label>
+            <label for="DESCRIPCION_DEPTO">Nombre del DEPARTAMENTO:</label>
             <input type="text" name="DESCRIPCION_DEPTO" th:field="*{DESCRIPCION_DEPTO}"/>
             <br/>
             <input type="submit" name="guardar" value="Guardar"/>

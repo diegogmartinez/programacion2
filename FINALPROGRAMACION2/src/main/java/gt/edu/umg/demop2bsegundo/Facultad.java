@@ -11,13 +11,13 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="tb_profesion")
-public class Profesion implements Serializable{
+@Table(name="tb_facultad")
+public class Facultad implements Serializable{
     private static final long serialVersionUID = 1L;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID_PROFESION;    
+    private Long ID_FACULTAD;    
     
-    private String DESCRIPCION_PROFESION;
+    private String FACULTAD;
 }

@@ -11,9 +11,9 @@
         <br/>
         <form th:action="@{/guardar}" method="post" th:object="${profesion}">
             <br/>
-            <label for="ID_PROFESION">ID de la Profesion:</label>
+            <label for="ID_PROFESION">ID de la PROFESION:</label>
             <input type="text" name="ID_PROFESION" th:field="*{ID_PROFESION}"
-            <label for="DESCRIPCION_PROFESION">Nombre del Departamento:</label>
+            <label for="DESCRIPCION_PROFESION">Nombre de la PROFESION:</label>
             <input type="text" name="DESCRIPCION_PROFESION" th:field="*{DESCRIPCION_PROFESION}"/>
             <br/>
             <input type="submit" name="guardar" value="Guardar"/>

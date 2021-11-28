@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gt.edu.umg.demop2bsegundo;
 import javax.persistence.*;
 import lombok.Data;
 import java.io.Serializable;
 
-/**
- *
- * @author Win10
- */
 @Data
 @Entity
 @Table(name="Persona")
@@ -23,6 +15,8 @@ public class Persona implements Serializable{
     private Long id_persona;
     private Long ID_DEPTO;
     private Long ID_PROFESION;
+    private Long ID_FACULTAD;
+    private Long ID_MARCA_CARRO;
     private String nombre;
     private String apellido;
     private String email;

@@ -8,16 +8,12 @@ package gt.edu.umg.demop2bsegundo.servicio;
 import gt.edu.umg.demop2bsegundo.Departamento;
 import gt.edu.umg.demop2bsegundo.Persona;
 import gt.edu.umg.demop2bsegundo.dao.IdeptoDao;
-import gt.edu.umg.demop2bsegundo.dao.IpersonaDao;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Win10
- */
+
 @Service
 public class DepartamentoServiceImpl implements DepartamentoService{
     @Autowired

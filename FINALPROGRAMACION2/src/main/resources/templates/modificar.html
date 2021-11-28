@@ -36,6 +36,24 @@
                             />
                 </select>
                 <br/>
+                <br/>
+                <label for="ID_FACULTAD">Facultad</label>
+                <select name="ID_FACULTAD" th:field="*{ID_FACULTAD}">
+                    <option th:each="facultad:${facultad}"
+                            th:value="${facultad.ID_FACULTAD}"
+                            th:text="${facultad.FACULTAD}"
+                            />
+                </select>
+                <br/>
+                <br/>
+                <label for="ID_MARCA_CARRO">Carro</label>
+                <select name="ID_MARCA_CARRO" th:field="*{ID_MARCA_CARRO}">
+                    <option th:each="carrro{carro}"
+                            th:value="${carro.ID_MARCA_CARRO}"
+                            th:text="${carro.MARCA}"
+                            />
+                </select>
+                <br/>
                 <label for="CORREO_ELECTRONICO">Email:</label>
                 <input type="email" name="CORREO_ELECTRONICO" th:field="*{CORREO_ELECTRONICO}"/>
                 <br/>

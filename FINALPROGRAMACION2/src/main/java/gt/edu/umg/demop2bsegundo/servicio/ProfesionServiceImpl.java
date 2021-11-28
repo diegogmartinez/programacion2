@@ -6,10 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- *
- * @author Win10
- */
+
 public class ProfesionServiceImpl implements ProfesionService{
 
     @Autowired
